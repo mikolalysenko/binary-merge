@@ -1,0 +1,33 @@
+{
+  "name": "binary-merge",
+  "version": "0.0.0",
+  "description": "2-way merge",
+  "main": "merge2.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "~0.4.1"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/binary-merge.git"
+  },
+  "keywords": [
+    "binary",
+    "merge",
+    "sort",
+    "sorting",
+    "sorted",
+    "array",
+    "algorithm"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "d0437e857a9c9e2f22732b6abed1d49e94623b87"
+}
