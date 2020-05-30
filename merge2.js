@@ -5,10 +5,10 @@ function merge2_cmp(a, b, result, compare, dedup) {
     , b_ptr = 0
     , r_ptr = 0
   while(a_ptr < a.length && b_ptr < b.length) {
-    if(compare(a[a_ptr], b[b_ptr]) < 0) {
-      result[r_ptr++] = a[a_ptr++]
-    } else if(!dedup || compare(b[b_ptr], a[a_ptr]) < 0) {
+    if(compare(b[b_ptr], a[a_ptr]) < 0) {
       result[r_ptr++] = b[b_ptr++]
+    } else if(!dedup || compare(a[a_ptr], b[b_ptr]) < 0) {
+      result[r_ptr++] = a[a_ptr++]
     } else {
       result[r_ptr++] = a[a_ptr++]
       b_ptr++
@@ -27,10 +27,10 @@ function merge2_def(a, b, result, dedup) {
     , b_ptr = 0
     , r_ptr = 0
   while(a_ptr < a.length && b_ptr < b.length) {
-    if(a[a_ptr] < b[b_ptr]) {
-      result[r_ptr++] = a[a_ptr++]
-    } else if(!dedup || b[b_ptr] < a[a_ptr]) {
+    if(b[b_ptr] < a[a_ptr]) {
       result[r_ptr++] = b[b_ptr++]
+    } else if(!dedup || a[a_ptr] < b[b_ptr]) {
+      result[r_ptr++] = a[a_ptr++]
     } else {
       result[r_ptr++] = a[a_ptr++]
       b_ptr++
