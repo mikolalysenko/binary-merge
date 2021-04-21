@@ -1,6 +1,6 @@
 "use strict"
 
-function intersect(a, b, compare, result) {
+function intersect(a, b, compare, joinf, result) {
   var a_ptr = 0
     , b_ptr = 0
     , r_ptr = 0
@@ -13,7 +13,8 @@ function intersect(a, b, compare, result) {
     } else if(compare(a[a_ptr], b[b_ptr]) < 0) {
       a_ptr++
     } else {
-      result[r_ptr++] = a[a_ptr++]
+      result[r_ptr++] = joinf ? joinf(a[a_ptr], b[b_ptr]) : a[a_ptr]
+      a_ptr++
       b_ptr++
     }
   }
