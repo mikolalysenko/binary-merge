@@ -1,6 +1,6 @@
 {
-  "name": "binary-merge",
-  "version": "0.0.0",
+  "name": "@wholebuzz/binary-merge",
+  "version": "0.0.1",
   "description": "2-way merge",
   "main": "merge2.js",
   "directories": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mikolalysenko/binary-merge.git"
+    "url": "git://github.com/wholebuzz/binary-merge.git"
   },
   "keywords": [
     "binary",
